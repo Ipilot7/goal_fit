@@ -17,7 +17,7 @@ class _SplashState extends State<Splash> {
   }
 
   void launch() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 1), () {
       context.go(Routes.loginPage);
     });
   }
@@ -32,7 +32,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("Spalsh")),
+      body: Center(child: Text("Splash")),
     );
   }
 }

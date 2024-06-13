@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:goal_fit/features/catalog.dart';
 import 'package:goal_fit/features/chat.dart';
 import 'package:goal_fit/features/home/home.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth.dart';
 import 'package:goal_fit/features/login/presentation/pages/login.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
@@ -21,7 +22,10 @@ class Routes {
   static String get chatPage => '/chatPage';
 
   static String get profilePage => '/profilePage';
+
   static String get loginPage => '/loginPage';
+
+  static String get authPage => '/authPage';
 }
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -47,6 +51,13 @@ class AppRoutes {
         path: Routes.loginPage,
         builder: (BuildContext context, GoRouterState state) {
           return const LoginPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.authPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const AuthPage();
         },
       ),
       StatefulShellRoute.indexedStack(

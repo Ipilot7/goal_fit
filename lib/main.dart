@@ -61,6 +61,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
+        fontFamily: 'Nunito',
         appBarTheme: AppBarTheme(
             elevation: 0,
             centerTitle: true,

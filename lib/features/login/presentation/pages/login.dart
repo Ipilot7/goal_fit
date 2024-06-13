@@ -56,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: AppColors.white,
         actions: <Widget>[
           TextButton(
-            onPressed: () => {context.go(Routes.homePage)},
+            onPressed: () => {context.go(Routes.authPage)},
             child: Text(
               'Пропустить',
               style: TextStyle(
@@ -162,9 +162,9 @@ class LoginScreenCarouselItem extends StatelessWidget {
               onPressed: () {
                 index <= 1
                     ? controller.animateToPage(index + 1,
-                        duration: const Duration(milliseconds: 300),
-                        curve: Curves.linear)
-                    : context.go(Routes.homePage);
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeOut)
+                    : context.go(Routes.authPage);
               },
               style: AppButtonStyles.primaryButton,
               child: const Text(
