@@ -25,24 +25,30 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-final LoginScreens = [
+final loginScreensItemsData = [
   LoginScreenData(
       image: 'assets/images/login_1.png',
       title: 'Онлайн-консультации с тренерами',
       infoText:
           'Занимайся онлайн под контролем профессиональных тренеров вместе с нашим приложением'),
   LoginScreenData(
-      image: 'assets/images/login_1.png',
-      title: 'Поможем тебе достичь твоей-фитнес цели ',
+      image: 'assets/images/login_2.png',
+      title: 'Поможем тебе достичь твоей фитнес-цели ',
       infoText:
           'Ставь цель и время, за которое хочешь достигнуть результата, а мы подберем подходящего тренера'),
   LoginScreenData(
-      image: 'assets/images/login_1.png',
-      title: 'Получай удовольствие  от спорта вместе с нами',
+      image: 'assets/images/login_3.png',
+      title: 'Получай удовольствие от спорта вместе с нами',
       infoText: 'Получай уникальные награды и бонусы за выполнение тренировок'),
 ];
 
 class _LoginPageState extends State<LoginPage> {
+  final pageController = PageController(
+    initialPage: 0,
+  );
+
+  int _activePage = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,24 +57,42 @@ class _LoginPageState extends State<LoginPage> {
         actions: <Widget>[
           TextButton(
             onPressed: () => {context.go(Routes.homePage)},
-            child: const Text('Пропустить'),
+            child: Text(
+              'Пропустить',
+              style: TextStyle(
+                  fontFamily: 'Nunito',
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                  color: AppColors.primaryPurple),
+            ),
           ),
         ],
       ),
       body: Column(
         children: [
           Expanded(
-            child: SizedBox(
+            child: Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height,
               child: PageView.builder(
-                itemCount: LoginScreens.length,
+                controller: pageController,
+                onPageChanged: (int page) {
+                  setState(() {
+                    _activePage = page;
+                  });
+                },
+                itemCount: loginScreensItemsData.length,
                 itemBuilder: (context, index) {
-                  return LoginScreenCarouselItem(data: LoginScreens[0]);
+                  return LoginScreenCarouselItem(
+                    data: loginScreensItemsData[index],
+                    controller: pageController,
+                    index: index,
+                  );
                 },
               ),
             ),
-          )
+          ),
+          LoginPagination(activePage: _activePage)
         ],
       ),
     );
@@ -77,10 +101,14 @@ class _LoginPageState extends State<LoginPage> {
 
 class LoginScreenCarouselItem extends StatelessWidget {
   final LoginScreenData data;
+  final PageController controller;
+  final int index;
 
   const LoginScreenCarouselItem({
     super.key,
     required this.data,
+    required this.controller,
+    required this.index,
   });
 
   @override
@@ -90,7 +118,7 @@ class LoginScreenCarouselItem extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(
-            height: 44,
+            height: 10,
           ),
           Center(
             child: ClipOval(
@@ -127,13 +155,17 @@ class LoginScreenCarouselItem extends StatelessWidget {
               fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(
-            height: 66,
-          ),
-          Container(
+          const SizedBox(height: 32),
+          SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () => {},
+              onPressed: () {
+                index <= 1
+                    ? controller.animateToPage(index + 1,
+                        duration: const Duration(milliseconds: 300),
+                        curve: Curves.linear)
+                    : context.go(Routes.homePage);
+              },
               style: AppButtonStyles.primaryButton,
               child: const Text(
                 'Далее',
@@ -141,6 +173,36 @@ class LoginScreenCarouselItem extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class LoginPagination extends StatelessWidget {
+  const LoginPagination({
+    super.key,
+    required int activePage,
+  }) : _activePage = activePage;
+
+  final int _activePage;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List<Widget>.generate(
+          loginScreensItemsData.length,
+          (index) => Padding(
+            padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 2),
+            child: CircleAvatar(
+              radius: 2,
+              backgroundColor: _activePage == index
+                  ? AppColors.primaryDark
+                  : AppColors.tipographyLight,
+            ),
+          ),
+        ),
       ),
     );
   }

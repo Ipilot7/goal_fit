@@ -15,6 +15,7 @@ class AppColors {
   static Color primaryPurple = const Color(0xff6526c9);
   static Color primaryPurpleHover = const Color(0xff490e94);
   static Color primaryPurpleLight = const Color(0xffede9fc);
+  static Color tipographyLight = const Color(0xffd8d8e1);
 }
 
 class AppShadow {
