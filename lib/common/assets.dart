@@ -28,33 +28,12 @@ class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
 
   String get basket => '$basePath/basket.svg';
-  String get barcode => '$basePath/barcode.svg';
-  String get list => '$basePath/list.svg';
-  String get search => '$basePath/search.svg';
-  String get add => '$basePath/add.svg';
-  String get call => '$basePath/call.svg';
-  String get callCenter => '$basePath/call_center.svg';
-  String get chat => '$basePath/chat.svg';
-  String get camera => '$basePath/camera.svg';
-  String get trash => '$basePath/trash.svg';
-  String get print => '$basePath/print.svg';
-  String get cash => '$basePath/cash.svg';
-  String get home => '$basePath/home.svg';
-  String get profile => '$basePath/profile.svg';
-  String get buy => '$basePath/buy.svg';
-  String get edit => '$basePath/edit.svg';
-  String get exit => '$basePath/exit.svg';
-  String get device => '$basePath/device.svg';
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
-  String get one => '$basePath/1.png';
-
-  String get cardBg => '$basePath/card_bg.png';
-
-  String get logo => '$basePath/manager_logo.png';
+  String get trainer => '$basePath/trainer.png';
 }
 
 class _Lottie extends _AssetsHolder {

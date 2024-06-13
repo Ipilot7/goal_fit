@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:goal_fit/features/catalog.dart';
-import 'package:goal_fit/features/chat.dart';
+import 'package:goal_fit/features/chat/chat.dart';
+import 'package:goal_fit/features/chat/user_chat.dart';
 import 'package:goal_fit/features/home/home.dart';
 import 'package:goal_fit/features/login/presentation/pages/login.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
@@ -22,6 +23,7 @@ class Routes {
 
   static String get profilePage => '/profilePage';
   static String get loginPage => '/loginPage';
+  static String get userChatPage => '/userChatPage';
 }
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -47,6 +49,14 @@ class AppRoutes {
         path: Routes.loginPage,
         builder: (BuildContext context, GoRouterState state) {
           return const LoginPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.userChatPage,
+        pageBuilder: (BuildContext context, GoRouterState state) {
+          return buildPageWithDefaultTransition<void>(
+              context: context, state: state, child: const UserChatPage());
         },
       ),
       StatefulShellRoute.indexedStack(
