@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
 
   void launch() {
     Future.delayed(const Duration(seconds: 1), () {
-      context.go(Routes.loginPage);
+      context.go(Routes.onboardPage);
     });
   }
 

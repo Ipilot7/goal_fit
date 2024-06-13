@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:goal_fit/common/all_contants.dart';
 import 'package:goal_fit/common/app_color.dart';
+import 'package:goal_fit/common/routes.dart';
 import 'package:goal_fit/common/utills/app_button_styles.dart';
 
 class AuthPage extends StatelessWidget {
@@ -62,7 +64,7 @@ class _AuthButtons extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () => {context.go(Routes.loginPage)},
             style: AppButtonStyles.primaryButton,
             child: const Text(
               'Войти',

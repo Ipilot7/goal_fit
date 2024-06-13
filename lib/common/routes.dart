@@ -3,8 +3,10 @@ import 'package:go_router/go_router.dart';
 import 'package:goal_fit/features/catalog.dart';
 import 'package:goal_fit/features/chat.dart';
 import 'package:goal_fit/features/home/home.dart';
-import 'package:goal_fit/features/login/presentation/pages/auth.dart';
-import 'package:goal_fit/features/login/presentation/pages/login.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/auth.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/login.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/password-recovery.dart';
+import 'package:goal_fit/features/login/presentation/pages/onboard.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
 import 'package:goal_fit/features/profile/presentation/pages/profile.dart';
@@ -23,9 +25,13 @@ class Routes {
 
   static String get profilePage => '/profilePage';
 
-  static String get loginPage => '/loginPage';
+  static String get onboardPage => '/onboardPage';
 
   static String get authPage => '/authPage';
+
+  static String get loginPage => '/authPage/loginPage';
+
+  static String get passwordRecovery => '/loginPage/passwordRecovery';
 }
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -48,9 +54,9 @@ class AppRoutes {
       ),
       GoRoute(
         parentNavigatorKey: rootNavigatorKey,
-        path: Routes.loginPage,
+        path: Routes.onboardPage,
         builder: (BuildContext context, GoRouterState state) {
-          return const LoginPage();
+          return const OnboardPage();
         },
       ),
       GoRoute(
@@ -58,6 +64,20 @@ class AppRoutes {
         path: Routes.authPage,
         builder: (BuildContext context, GoRouterState state) {
           return const AuthPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.loginPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const LoginPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.passwordRecovery,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PasswordRecoveryPage();
         },
       ),
       StatefulShellRoute.indexedStack(

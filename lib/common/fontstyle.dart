@@ -134,6 +134,28 @@ class AppTextStyles {
     color: AppColors.black,
     fontFamily: AppFontFamilies.opensans,
   );
+
+  static final h1 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final regular = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final primaryButton = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: AppColors.white,
+    fontFamily: 'Nunito',
+  );
 }
 
 class AppFontFamilies {
