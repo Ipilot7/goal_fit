@@ -1,0 +1,3 @@
+enum ProductStatus {
+  add, edit
+}

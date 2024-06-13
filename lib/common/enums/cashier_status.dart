@@ -1,0 +1,1 @@
+enum CashierStatus { add, edit }
