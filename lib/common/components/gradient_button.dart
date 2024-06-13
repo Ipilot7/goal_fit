@@ -1,7 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:goal_fit/common/app_color.dart';
-import 'package:goal_fit/common/app_text_style.dart';
+import 'package:goal_fit/common/fontstyle.dart';
 
 class GradientButton extends StatelessWidget {
   const GradientButton({
@@ -65,7 +65,7 @@ class GradientButton extends StatelessWidget {
                             text,
                             maxLines: 1,
                             style: textStyle ??
-                                AppTextStyles.body20w4
+                                AppTextStyles.normal18
                                     .copyWith(color: AppColors.white),
                           ),
                         ),
@@ -81,7 +81,7 @@ class GradientButton extends StatelessWidget {
                         Text(
                           text,
                           style: textStyle ??
-                              AppTextStyles.body20w4
+                              AppTextStyles.normal18
                                   .copyWith(color: AppColors.white),
                         ),
                       ],

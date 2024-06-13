@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:goal_fit/common/fontstyle.dart';
 
 import 'app_color.dart';
-import 'app_text_style.dart';
 
 class CustomTextField extends StatefulWidget {
   const CustomTextField({
@@ -80,7 +80,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         focusNode: widget.focusNode,
         maxLines: widget.maxLines,
         minLines: widget.minLines,
-        style: widget.style ?? AppTextStyles.body16w4,
+        style: widget.style ?? AppTextStyles.normal16,
         controller: widget.controller,
         onFieldSubmitted: widget.onSubmitted,
         onChanged: widget.onChanged,
@@ -131,7 +131,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               borderRadius: BorderRadius.circular(widget.radius ?? 20)),
           border: InputBorder.none,
           hintStyle: widget.hintStyle ??
-              AppTextStyles.body16w4.copyWith(color: AppColors.grey),
+              AppTextStyles.normal16.copyWith(color: AppColors.grey),
           hintText: widget.hintText,
         ),
       ),

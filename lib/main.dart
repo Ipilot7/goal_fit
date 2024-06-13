@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:goal_fit/common/app_color.dart';
-import 'package:goal_fit/common/app_text_style.dart';
+import 'package:goal_fit/common/fontstyle.dart';
 import 'package:goal_fit/common/routes.dart';
 import 'package:goal_fit/di/di.dart' as sl;
 
@@ -66,7 +66,7 @@ class _MyAppState extends State<MyApp> {
             centerTitle: true,
             iconTheme: IconThemeData(color: AppColors.white),
             titleTextStyle:
-                AppTextStyles.body16w7.copyWith(color: AppColors.white)),
+                AppTextStyles.normal16.copyWith(color: AppColors.white)),
         scaffoldBackgroundColor: AppColors.white,
       ),
       title: 'skladum',
