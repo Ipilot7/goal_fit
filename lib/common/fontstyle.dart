@@ -157,6 +157,20 @@ class AppTextStyles {
     fontFamily: 'Nunito',
   );
 
+  static final h2 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final h3 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
   static final primaryButton = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w700,

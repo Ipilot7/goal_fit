@@ -45,54 +45,30 @@ List<IconItem> icons = [
         color: AppColors.tipographyDark,
       ),
       label: 'Home'),
-
   IconItem(
       icon: Icon(
         Icons.apps,
         color: AppColors.tipographyDark,
       ),
       label: 'Catalog'),
-
   IconItem(
       icon: Icon(
         Icons.back_hand,
         color: AppColors.tipographyDark,
       ),
       label: 'Trainings'),
-
   IconItem(
       icon: Icon(
         Icons.chat,
         color: AppColors.tipographyDark,
       ),
       label: 'Chat'),
-
   IconItem(
       icon: Icon(
         Icons.portrait,
         color: AppColors.tipographyDark,
       ),
       label: 'Profile'),
-  // Icon(
-  //   Icons.home,
-  //   color: AppColors.tipographyDark,
-  // ),
-  // Icon(
-  //   Icons.apps,
-  //   color: AppColors.tipographyDark,
-  // ),
-  // Icon(
-  //   Icons.back_hand,
-  //   color: AppColors.tipographyDark,
-  // ),
-  // Icon(
-  //   Icons.chat,
-  //   color: AppColors.tipographyDark,
-  // ),
-  // Icon(
-  //   Icons.portrait,
-  //   color: AppColors.tipographyDark,
-  // ),
 ];
 
 class IconItem {
