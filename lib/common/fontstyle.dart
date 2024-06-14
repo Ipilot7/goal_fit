@@ -150,12 +150,25 @@ class AppTextStyles {
     fontFamily: 'Nunito',
   );
 
+  static final subinfo = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
   static final primaryButton = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w700,
     color: AppColors.white,
     fontFamily: 'Nunito',
   );
+
+  static final segmentedButtonStyle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Nunito',
+      color: AppColors.tipographyDark);
 }
 
 class AppFontFamilies {

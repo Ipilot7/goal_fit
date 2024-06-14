@@ -34,4 +34,8 @@ class AppButtonStyles {
       shape: const WidgetStatePropertyAll(RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)))),
       overlayColor: WidgetStatePropertyAll(AppColors.primaryPurpleLightHover));
+
+  static ButtonStyle segementedButton = ButtonStyle(
+    shape: WidgetStatePropertyAll(LinearBorder.none),
+  );
 }

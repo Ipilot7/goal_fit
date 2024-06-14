@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                     const Text(
                       'Есть аккаунт?',
                     ),
-                    TextButton(onPressed: () {}, child: Text('Войти'))
+                    TextButton(onPressed: () {}, child: const Text('Войти'))
                   ],
                 )
               ],
@@ -162,7 +162,7 @@ class _LoginButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
-          onPressed: () => {},
+          onPressed: () => context.go(Routes.homePage),
           style: AppButtonStyles.primaryButton,
           child: Text(
             'Войти',
