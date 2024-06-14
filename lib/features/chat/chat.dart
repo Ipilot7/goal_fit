@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:goal_fit/common/all_contants.dart';
 import 'package:goal_fit/common/extentions.dart';
@@ -13,7 +14,10 @@ class ChatPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Чаты"),
         titleTextStyle: AppTextStyles.bold24,
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+        actions: [
+          IconButton(
+              onPressed: () {}, icon: SvgPicture.asset(Assets.icons.search))
+        ],
       ),
       body: ListView.separated(
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),

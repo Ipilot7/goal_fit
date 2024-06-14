@@ -27,7 +27,22 @@ abstract class _AssetsHolder {
 class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
 
-  String get basket => '$basePath/basket.svg';
+  String get left => '$basePath/arrow-left.svg';
+  String get begin => '$basePath/begin.svg';
+  String get call => '$basePath/call.svg';
+  String get camera => '$basePath/camera.svg';
+  String get chervonDown => '$basePath/chervonDown.svg';
+  String get delTrainer => '$basePath/del_trainer.svg';
+  String get goTraining => '$basePath/go_training.svg';
+  String get microphone => '$basePath/Microphone.svg';
+  String get plus => '$basePath/plus.svg';
+  String get receipt => '$basePath/receipt.svg';
+  String get search => '$basePath/Search.svg';
+  String get trash => '$basePath/trash.svg';
+  String get user => '$basePath/user.svg';
+  String get video => '$basePath/video.svg';
+  String get share => '$basePath/share.svg';
+  String get heart => '$basePath/heart.svg';
 }
 
 class _Images extends _AssetsHolder {
