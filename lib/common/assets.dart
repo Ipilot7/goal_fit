@@ -27,34 +27,37 @@ abstract class _AssetsHolder {
 class _Icons extends _AssetsHolder {
   const _Icons() : super('assets/icons');
 
-  String get basket => '$basePath/basket.svg';
-  String get barcode => '$basePath/barcode.svg';
-  String get list => '$basePath/list.svg';
-  String get search => '$basePath/search.svg';
-  String get add => '$basePath/add.svg';
+  String get left => '$basePath/arrow-left.svg';
+  String get begin => '$basePath/begin.svg';
   String get call => '$basePath/call.svg';
-  String get callCenter => '$basePath/call_center.svg';
-  String get chat => '$basePath/chat.svg';
   String get camera => '$basePath/camera.svg';
+  String get chervonDown => '$basePath/chervonDown.svg';
+  String get delTrainer => '$basePath/del_trainer.svg';
+  String get goTraining => '$basePath/go_training.svg';
+  String get microphone => '$basePath/Microphone.svg';
+  String get plus => '$basePath/plus.svg';
+  String get receipt => '$basePath/receipt.svg';
+  String get search => '$basePath/Search.svg';
   String get trash => '$basePath/trash.svg';
-  String get print => '$basePath/print.svg';
-  String get cash => '$basePath/cash.svg';
+  String get user => '$basePath/user.svg';
+  String get video => '$basePath/video.svg';
+  String get share => '$basePath/share.svg';
+  String get heart => '$basePath/heart.svg';
+  String get chervonRight => '$basePath/chervon_right.svg';
+  String get flash => '$basePath/flash.svg';
+  String get flashActive => '$basePath/flash_active.svg';
+  String get catalog => '$basePath/catalog.svg';
+  String get chat => '$basePath/chat.svg';
   String get home => '$basePath/home.svg';
   String get profile => '$basePath/profile.svg';
-  String get buy => '$basePath/buy.svg';
-  String get edit => '$basePath/edit.svg';
-  String get exit => '$basePath/exit.svg';
-  String get device => '$basePath/device.svg';
+  String get training => '$basePath/training.svg';
+  String get filters => '$basePath/filters.svg';
 }
 
 class _Images extends _AssetsHolder {
   const _Images() : super('assets/images');
 
-  String get one => '$basePath/1.png';
-
-  String get cardBg => '$basePath/card_bg.png';
-
-  String get logo => '$basePath/manager_logo.png';
+  String get trainer => '$basePath/trainer.png';
 }
 
 class _Lottie extends _AssetsHolder {

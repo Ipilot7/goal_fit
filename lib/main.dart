@@ -1,8 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:goal_fit/common/app_color.dart';
-import 'package:goal_fit/common/fontstyle.dart';
 import 'package:goal_fit/common/routes.dart';
 import 'package:goal_fit/di/di.dart' as sl;
 
@@ -60,15 +58,6 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: ThemeData(
-        appBarTheme: AppBarTheme(
-            elevation: 0,
-            centerTitle: true,
-            iconTheme: IconThemeData(color: AppColors.white),
-            titleTextStyle:
-                AppTextStyles.normal16.copyWith(color: AppColors.white)),
-        scaffoldBackgroundColor: AppColors.white,
-      ),
       title: 'skladum',
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,

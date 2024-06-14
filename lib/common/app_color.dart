@@ -9,7 +9,9 @@ class AppColors {
   static Color blue = const Color(0xff4EB4FF);
   static Color red = Colors.red.shade500;
   static Color green = const Color(0xff00EB86);
-
+  static Color background = const Color(0xffF9F9FA);
+  static Color purple = const Color(0xffEDE9FC);
+  static Color primaryPurple = const Color(0xff621BBC);
 }
 
 class AppShadow {

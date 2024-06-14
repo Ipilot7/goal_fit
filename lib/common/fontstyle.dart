@@ -36,6 +36,30 @@ class AppTextStyles {
     color: AppColors.black,
     fontFamily: AppFontFamilies.opensans,
   );
+  static final regular10 = TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+    fontFamily: AppFontFamilies.opensans,
+  );
+  static final regular12 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+    fontFamily: AppFontFamilies.opensans,
+  );
+  static final regular16 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+    fontFamily: AppFontFamilies.opensans,
+  );
+  static final regular14 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.black,
+    fontFamily: AppFontFamilies.opensans,
+  );
   static final semiBold14 = TextStyle(
     fontSize: 14,
     height: (18 / 14),

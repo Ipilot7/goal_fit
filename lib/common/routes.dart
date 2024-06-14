@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:goal_fit/features/catalog.dart';
-import 'package:goal_fit/features/chat.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/catalog.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/exercise.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/recipes.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/trainer.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/training.dart';
+import 'package:goal_fit/features/chat/chat.dart';
+import 'package:goal_fit/features/chat/user_chat.dart';
+import 'package:goal_fit/features/chat/user_info.dart';
 import 'package:goal_fit/features/home/home.dart';
 import 'package:goal_fit/features/login/presentation/pages/login.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
 import 'package:goal_fit/features/profile/presentation/pages/profile.dart';
-import 'package:goal_fit/features/traning.dart';
 
 class Routes {
   static String get splash => '/splashScreen';
@@ -21,7 +26,16 @@ class Routes {
   static String get chatPage => '/chatPage';
 
   static String get profilePage => '/profilePage';
+
   static String get loginPage => '/loginPage';
+
+  static String get userChatPage => '/userChatPage';
+
+  static String get userInfoPage => '/userInfoPage';
+  static String get exercise => 'exercise';
+  static String get recipes => 'recipes';
+  static String get trainer => 'trainer';
+  static String get training => 'training';
 }
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -47,6 +61,21 @@ class AppRoutes {
         path: Routes.loginPage,
         builder: (BuildContext context, GoRouterState state) {
           return const LoginPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.userInfoPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const UserInfoPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.userChatPage,
+        pageBuilder: (BuildContext context, GoRouterState state) {
+          return buildPageWithDefaultTransition<void>(
+              context: context, state: state, child: const UserChatPage());
         },
       ),
       StatefulShellRoute.indexedStack(
@@ -91,15 +120,35 @@ class AppRoutes {
                         state: state,
                         child: const CatalogPage());
                   },
-                  routes: const [
-                    // GoRoute(
-                    //   name: Routes.albumsPage,
-                    //   path: Routes.albumsPage,
-                    //   builder: (BuildContext context, GoRouterState state) {
-                    //     return AlbumsPage(
-                    //         albumModel: state.extra as AlbumsModel);
-                    //   },
-                    // ),
+                  routes: [
+                    GoRoute(
+                      name: Routes.exercise,
+                      path: Routes.exercise,
+                      builder: (BuildContext context, GoRouterState state) {
+                        return const ExercisePage();
+                      },
+                    ),
+                    GoRoute(
+                      name: Routes.recipes,
+                      path: Routes.recipes,
+                      builder: (BuildContext context, GoRouterState state) {
+                        return const RecipesPage();
+                      },
+                    ),
+                    GoRoute(
+                      name: Routes.trainer,
+                      path: Routes.trainer,
+                      builder: (BuildContext context, GoRouterState state) {
+                        return const TrainerPage();
+                      },
+                    ),
+                    GoRoute(
+                      name: Routes.training,
+                      path: Routes.training,
+                      builder: (BuildContext context, GoRouterState state) {
+                        return const TrainingPage();
+                      },
+                    ),
                   ]),
             ],
           ),
