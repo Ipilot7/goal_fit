@@ -36,8 +36,9 @@ class _TrainingPageState extends State<TrainingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryLight,
       appBar: AppBar(
-        backgroundColor: AppColors.white,
+        backgroundColor: AppColors.primaryLight,
         title: Text(
           'Тренерская',
           style: AppTextStyles.h1,
@@ -97,21 +98,102 @@ class _TrainingPageState extends State<TrainingPage> {
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   if (_isSelected == pagesMap[0]) {
-                    return _Students();
+                    return _StudentsScreen();
                   } else if (_isSelected == pagesMap[1]) {
-                    return const Center(
-                      child: Text('Тренировки'),
-                    );
+                    return _TrainigsScreen();
                   } else if (_isSelected == pagesMap[2]) {
-                    return const Center(
-                      child: Text('Задачи'),
-                    );
+                    return _TasksScreen();
                   } else {
-                    return const Center(
-                      child: Text('ERROR'),
+                    return Center(
+                      child: Text(
+                        'Смахните)',
+                        style: AppTextStyles.h1,
+                      ),
                     );
                   }
                 },
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TasksScreen extends StatelessWidget {
+  const _TasksScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(
+                'Задания',
+                style: AppTextStyles.h1,
+                textAlign: TextAlign.left,
+              ),
+              const Spacer(),
+              Image.asset('assets/icons/plus.png'),
+            ],
+          ),
+          const Padding(
+            padding: const EdgeInsets.only(bottom: 8.0, top: 8),
+            child: const TextField(
+              style: TextStyle(height: 0.5),
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
+                hintText: 'Найти задания',
+                filled: true,
+                fillColor: Color(0xfff4f4f5),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _TrainigsScreen extends StatelessWidget {
+  const _TrainigsScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(
+                'Тренировки',
+                style: AppTextStyles.h1,
+                textAlign: TextAlign.left,
+              ),
+              const Spacer(),
+              Image.asset('assets/icons/plus.png'),
+            ],
+          ),
+          const Padding(
+            padding: const EdgeInsets.only(bottom: 8.0, top: 8),
+            child: const TextField(
+              style: TextStyle(height: 0.5),
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.all(Radius.circular(8))),
+                hintText: 'Найти тренировку',
+                filled: true,
+                fillColor: Color(0xfff4f4f5),
               ),
             ),
           ),
@@ -132,8 +214,8 @@ class Student {
   });
 }
 
-class _Students extends StatelessWidget {
-  const _Students({
+class _StudentsScreen extends StatelessWidget {
+  const _StudentsScreen({
     super.key,
   });
 
@@ -156,10 +238,42 @@ class _Students extends StatelessWidget {
           image: 'assets/images/avatar.png',
           name: 'Alena',
           info: 'Поддержание физ. формы'),
+      Student(
+          image: 'assets/images/avatar.png', name: 'Alex', info: 'Похудение'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Michail',
+          info: 'Набор массы'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Elena',
+          info: 'Составление диет'),
+      Student(
+          image: 'assets/images/avatar.png', name: 'Anna', info: 'Похудение'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Alena',
+          info: 'Поддержание физ. формы'),
+      Student(
+          image: 'assets/images/avatar.png', name: 'Alex', info: 'Похудение'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Michail',
+          info: 'Набор массы'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Elena',
+          info: 'Составление диет'),
+      Student(
+          image: 'assets/images/avatar.png', name: 'Anna', info: 'Похудение'),
+      Student(
+          image: 'assets/images/avatar.png',
+          name: 'Alena',
+          info: 'Поддержание физ. формы'),
     ];
 
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
       child: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -175,15 +289,18 @@ class _Students extends StatelessWidget {
                 Text('${students.length}/50'),
               ],
             ),
-            const TextField(
-              style: TextStyle(height: 0.5),
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.all(Radius.circular(8))),
-                hintText: 'Найти ученика',
-                filled: true,
-                fillColor: Color(0xfff4f4f5),
+            const Padding(
+              padding: const EdgeInsets.only(bottom: 8.0, top: 8),
+              child: const TextField(
+                style: TextStyle(height: 0.5),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
+                      borderRadius: BorderRadius.all(Radius.circular(8))),
+                  hintText: 'Найти ученика',
+                  filled: true,
+                  fillColor: Color(0xfff4f4f5),
+                ),
               ),
             ),
             Expanded(
