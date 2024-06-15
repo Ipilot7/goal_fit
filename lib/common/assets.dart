@@ -43,6 +43,14 @@ class _Icons extends _AssetsHolder {
   String get video => '$basePath/video.svg';
   String get share => '$basePath/share.svg';
   String get heart => '$basePath/heart.svg';
+  String get chervonRight => '$basePath/chervon_right.svg';
+  String get flash => '$basePath/flash.svg';
+  String get flashActive => '$basePath/flash_active.svg';
+  String get catalog => '$basePath/catalog.svg';
+  String get chat => '$basePath/chat.svg';
+  String get home => '$basePath/home.svg';
+  String get profile => '$basePath/profile.svg';
+  String get training => '$basePath/training.svg';
 }
 
 class _Images extends _AssetsHolder {
