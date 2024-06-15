@@ -106,7 +106,7 @@ class _TrainingPageState extends State<TrainingPage> {
                   } else {
                     return Center(
                       child: Text(
-                        'Смахните)',
+                        'Смахните вправо или влево)',
                         style: AppTextStyles.h1,
                       ),
                     );
