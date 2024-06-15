@@ -31,11 +31,11 @@ class CatalogPage extends StatelessWidget {
             _CatalogTitle(
               title: 'Тренировки',
             ),
-            _TrainersList(),
+            _TrainingsList(),
             _CatalogTitle(
               title: 'Упражнения',
             ),
-            _TrainersList(),
+            _ExerList(),
           ],
         ),
       ),
@@ -82,18 +82,86 @@ class _TrainersList extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
-          _TrainersListItem(),
-          _TrainersListItem(),
-          _TrainersListItem(),
+          _ListItem(
+            image: 'assets/images/catalog_trener.png',
+            name: 'Игорь Каравалов',
+            info: 'Тренер-нутрициолог',
+          ),
+          _ListItem(
+            image: 'assets/images/catalog_trener2.png',
+            name: 'Ольга Кузьмина',
+            info: 'Тренер-нутрициолог',
+          ),
         ],
       ),
     );
   }
 }
 
-class _TrainersListItem extends StatelessWidget {
-  const _TrainersListItem({
+class _TrainingsList extends StatelessWidget {
+  const _TrainingsList({
     super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: const [
+          _ListItem(
+            image: 'assets/images/swim.png',
+            name: 'Плавание в бассейне',
+            info: '',
+          ),
+          _ListItem(
+            image: 'assets/images/velo.png',
+            name: 'Велосипедная тренировка',
+            info: '',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ExerList extends StatelessWidget {
+  const _ExerList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: const [
+          _ListItem(
+            image: 'assets/images/catalog_exer.png',
+            name: 'Подтягивания на турнике',
+            info: '',
+          ),
+          _ListItem(
+            image: 'assets/images/gim.png',
+            name: 'Жим',
+            info: '',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ListItem extends StatelessWidget {
+  final String image;
+  final String name;
+  final String info;
+
+  const _ListItem({
+    super.key,
+    required this.image,
+    required this.name,
+    required this.info,
   });
 
   @override
@@ -103,14 +171,17 @@ class _TrainersListItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset('assets/images/catalog_trener.png'),
+          Image.asset(
+            image,
+            height: 130,
+          ),
           Text(
-            'Игорь Каравалов',
+            name,
             style: AppTextStyles.h3,
             textAlign: TextAlign.left,
           ),
           Text(
-            'Тренер-нутрициолог',
+            info,
             style: AppTextStyles.subinfo,
             textAlign: TextAlign.left,
           ),
