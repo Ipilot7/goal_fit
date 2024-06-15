@@ -51,6 +51,7 @@ class _Icons extends _AssetsHolder {
   String get home => '$basePath/home.svg';
   String get profile => '$basePath/profile.svg';
   String get training => '$basePath/training.svg';
+  String get filters => '$basePath/filters.svg';
 }
 
 class _Images extends _AssetsHolder {

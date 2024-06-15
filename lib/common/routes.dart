@@ -4,6 +4,7 @@ import 'package:goal_fit/features/catalog/presentation/pages/catalog.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/exercise.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/recipes.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/trainer.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/training.dart';
 import 'package:goal_fit/features/chat/chat.dart';
 import 'package:goal_fit/features/chat/user_chat.dart';
 import 'package:goal_fit/features/chat/user_info.dart';
@@ -12,7 +13,6 @@ import 'package:goal_fit/features/login/presentation/pages/login.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
 import 'package:goal_fit/features/profile/presentation/pages/profile.dart';
-import 'package:goal_fit/features/traning.dart';
 
 class Routes {
   static String get splash => '/splashScreen';
