@@ -48,7 +48,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                     ),
                     2.h,
                     Text(
-                      "data",
+                      names[index],
                       style: AppTextStyles.regular10.copyWith(
                           color: widget.child.currentIndex == index
                               ? AppColors.primaryPurple

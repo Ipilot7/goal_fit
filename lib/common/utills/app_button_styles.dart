@@ -3,10 +3,10 @@ import 'package:goal_fit/common/all_contants.dart';
 
 class AppButtonStyles {
   static ButtonStyle primaryButton = ButtonStyle(
-    backgroundColor: WidgetStatePropertyAll(AppColors.primaryPurple),
-    fixedSize: const WidgetStatePropertyAll(Size(double.infinity, 44)),
-    foregroundColor: WidgetStatePropertyAll(AppColors.white),
-    textStyle: WidgetStatePropertyAll<TextStyle?>(
+    backgroundColor: MaterialStatePropertyAll(AppColors.primaryPurple),
+    fixedSize: const MaterialStatePropertyAll(Size(double.infinity, 44)),
+    foregroundColor: MaterialStatePropertyAll(AppColors.white),
+    textStyle: MaterialStatePropertyAll<TextStyle?>(
       TextStyle(
         fontFamily: 'Nunito',
         color: AppColors.white,
@@ -14,16 +14,16 @@ class AppButtonStyles {
         fontWeight: FontWeight.w700,
       ),
     ),
-    shape: const WidgetStatePropertyAll(RoundedRectangleBorder(
+    shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(12)))),
-    overlayColor: WidgetStatePropertyAll(AppColors.primaryPurpleHover),
+    overlayColor: MaterialStatePropertyAll(AppColors.primaryPurpleHover),
   );
 
   static ButtonStyle secondaryButton = ButtonStyle(
-      backgroundColor: WidgetStatePropertyAll(AppColors.primaryPurpleLight),
-      fixedSize: const WidgetStatePropertyAll(Size(double.infinity, 44)),
-      foregroundColor: WidgetStatePropertyAll(AppColors.white),
-      textStyle: WidgetStatePropertyAll<TextStyle?>(
+      backgroundColor: MaterialStatePropertyAll(AppColors.primaryPurpleLight),
+      fixedSize: const MaterialStatePropertyAll(Size(double.infinity, 44)),
+      foregroundColor: MaterialStatePropertyAll(AppColors.white),
+      textStyle: MaterialStatePropertyAll<TextStyle?>(
         TextStyle(
           fontFamily: 'Nunito',
           color: AppColors.primaryPurple,
@@ -31,11 +31,11 @@ class AppButtonStyles {
           fontWeight: FontWeight.w700,
         ),
       ),
-      shape: const WidgetStatePropertyAll(RoundedRectangleBorder(
+      shape: const MaterialStatePropertyAll(RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(12)))),
-      overlayColor: WidgetStatePropertyAll(AppColors.primaryPurpleLightHover));
+      overlayColor: MaterialStatePropertyAll(AppColors.primaryPurpleLightHover));
 
   static ButtonStyle segementedButton = ButtonStyle(
-    shape: WidgetStatePropertyAll(LinearBorder.none),
+    shape: MaterialStatePropertyAll(LinearBorder.none),
   );
 }
