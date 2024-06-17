@@ -32,7 +32,7 @@ final loginScreensItemsData = [
       infoText:
           'Занимайся онлайн под контролем профессиональных тренеров вместе с нашим приложением'),
   OnboardScreenData(
-      image: 'assets/images/login_2.png',
+      image: 'assets/images/login_2.jpeg',
       title: 'Поможем тебе достичь твоей фитнес-цели ',
       infoText:
           'Ставь цель и время, за которое хочешь достигнуть результата, а мы подберем подходящего тренера'),
