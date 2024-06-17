@@ -9,7 +9,10 @@ import 'package:goal_fit/features/chat/chat.dart';
 import 'package:goal_fit/features/chat/user_chat.dart';
 import 'package:goal_fit/features/chat/user_info.dart';
 import 'package:goal_fit/features/home/home.dart';
-import 'package:goal_fit/features/login/presentation/pages/login.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/auth.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/login.dart';
+import 'package:goal_fit/features/login/presentation/pages/auth/password-recovery.dart';
+import 'package:goal_fit/features/login/presentation/pages/onboard.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
 import 'package:goal_fit/features/profile/presentation/pages/profile.dart';
@@ -36,6 +39,11 @@ class Routes {
   static String get recipes => 'recipes';
   static String get trainer => 'trainer';
   static String get training => 'training';
+  static String get onboardPage => '/onboardPage';
+
+  static String get authPage => '/authPage';
+
+  static String get passwordRecovery => '/loginPage/passwordRecovery';
 }
 
 final GlobalKey<NavigatorState> rootNavigatorKey =
@@ -58,6 +66,20 @@ class AppRoutes {
       ),
       GoRoute(
         parentNavigatorKey: rootNavigatorKey,
+        path: Routes.onboardPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const OnboardPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.authPage,
+        builder: (BuildContext context, GoRouterState state) {
+          return const AuthPage();
+        },
+      ),
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
         path: Routes.loginPage,
         builder: (BuildContext context, GoRouterState state) {
           return const LoginPage();
@@ -75,7 +97,13 @@ class AppRoutes {
         path: Routes.userChatPage,
         pageBuilder: (BuildContext context, GoRouterState state) {
           return buildPageWithDefaultTransition<void>(
-              context: context, state: state, child: const UserChatPage());
+              context: context, state: state, child: const UserChatPage());}),
+     
+      GoRoute(
+        parentNavigatorKey: rootNavigatorKey,
+        path: Routes.passwordRecovery,
+        builder: (BuildContext context, GoRouterState state) {
+          return const PasswordRecoveryPage();
         },
       ),
       StatefulShellRoute.indexedStack(

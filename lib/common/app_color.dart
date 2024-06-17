@@ -12,6 +12,13 @@ class AppColors {
   static Color background = const Color(0xffF9F9FA);
   static Color purple = const Color(0xffEDE9FC);
   static Color primaryPurple = const Color(0xff621BBC);
+  static Color primaryDark = const Color(0xff10052d);
+  static Color primaryLight = const Color(0xfff9f9fa);
+  static Color primaryPurpleHover = const Color(0xff490e94);
+  static Color primaryPurpleLight = const Color(0xffede9fc);
+  static Color primaryPurpleLightHover = const Color(0xffe2def0);
+  static Color tipographyLight = const Color(0xffd8d8e1);
+  static Color tipographyDark = const Color(0xff969595);
 }
 
 class AppShadow {

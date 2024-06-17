@@ -158,6 +158,55 @@ class AppTextStyles {
     color: AppColors.black,
     fontFamily: AppFontFamilies.opensans,
   );
+
+  static final h1 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final regular = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final subinfo = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final h2 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final h3 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w700,
+    color: AppColors.primaryDark,
+    fontFamily: 'Nunito',
+  );
+
+  static final primaryButton = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: AppColors.white,
+    fontFamily: 'Nunito',
+  );
+
+  static final segmentedButtonStyle = TextStyle(
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      fontFamily: 'Nunito',
+      color: AppColors.tipographyDark);
 }
 
 class AppFontFamilies {
