@@ -5,8 +5,8 @@ import 'package:goal_fit/common/extentions.dart';
 import 'package:goal_fit/common/fontstyle.dart';
 import 'package:goal_fit/features/catalog/presentation/widgets/section_item.dart';
 
-class TrainingPage extends StatelessWidget {
-  const TrainingPage({super.key});
+class TrainingCatalogPage extends StatelessWidget {
+  const TrainingCatalogPage({super.key});
 
   @override
   Widget build(BuildContext context) {

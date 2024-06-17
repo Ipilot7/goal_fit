@@ -16,6 +16,7 @@ import 'package:goal_fit/features/login/presentation/pages/onboard.dart';
 import 'package:goal_fit/features/login/presentation/pages/splash.dart';
 import 'package:goal_fit/features/main_page.dart';
 import 'package:goal_fit/features/profile/presentation/pages/profile.dart';
+import 'package:goal_fit/features/traning.dart';
 
 class Routes {
   static String get splash => '/splashScreen';
@@ -93,12 +94,12 @@ class AppRoutes {
         },
       ),
       GoRoute(
-        parentNavigatorKey: rootNavigatorKey,
-        path: Routes.userChatPage,
-        pageBuilder: (BuildContext context, GoRouterState state) {
-          return buildPageWithDefaultTransition<void>(
-              context: context, state: state, child: const UserChatPage());}),
-     
+          parentNavigatorKey: rootNavigatorKey,
+          path: Routes.userChatPage,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return buildPageWithDefaultTransition<void>(
+                context: context, state: state, child: const UserChatPage());
+          }),
       GoRoute(
         parentNavigatorKey: rootNavigatorKey,
         path: Routes.passwordRecovery,
@@ -174,7 +175,7 @@ class AppRoutes {
                       name: Routes.training,
                       path: Routes.training,
                       builder: (BuildContext context, GoRouterState state) {
-                        return const TrainingPage();
+                        return const TrainingCatalogPage();
                       },
                     ),
                   ]),
