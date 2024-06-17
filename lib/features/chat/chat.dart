@@ -86,7 +86,7 @@ class ChatPage extends StatelessWidget {
           separatorBuilder: (_, index) => const SizedBox(
                 height: 6,
               ),
-          itemCount: 10),
+          itemCount: 1),
     );
   }
 }

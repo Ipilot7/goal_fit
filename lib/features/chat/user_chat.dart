@@ -41,7 +41,9 @@ class UserChatPage extends StatelessWidget with BottomSheetsMixin {
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
           itemBuilder: (_, index) => ChatItemWidget(
                 isMe: index == 1,
-                text: 'asdasdasjdasjdasidjasjdasdhasjndasdsaihdihsa',
+                text: index == 0
+                    ? 'Елизавета Корчагина Привет! Готовы приступить к тренировкам? Я специализируюсь на наборе массы и веса. Могу работать нутрициологом. Не могли бы Вы рассказать больше о своих целях?'
+                    : "С чего начнём? приступить к тренировке?",
                 time: '22:10',
               ),
           separatorBuilder: (_, index) => 12.h,
