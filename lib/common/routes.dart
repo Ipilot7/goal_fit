@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:goal_fit/features/catalog/presentation/pages/catalog.dart';
+import 'package:goal_fit/features/catalog/presentation/pages/catalog_def.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/exercise.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/recipes.dart';
 import 'package:goal_fit/features/catalog/presentation/pages/trainer.dart';
